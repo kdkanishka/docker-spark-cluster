@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
  wget https://archive.apache.org/dist/spark/spark-2.1.1/spark-2.1.1-bin-hadoop2.6.tgz && \
  tar -xvf spark-2.1.1-bin-hadoop2.6.tgz
 
+VOLUME ["/home/spark/data"]
+
 ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64 
 ENV SPARK_HOME /home/spark/spark-2.1.1-bin-hadoop2.6
 
